@@ -1,0 +1,28 @@
+{
+  "name": "notion-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Notion API integration",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/main.ts",
+    "start": "node dist/main.js",
+    "watch": "tsx --watch src/main.ts",
+    "test": "node test-server.js",
+    "test:integration": "NOTION_API_KEY=test npm run dev"
+  },
+  "keywords": ["mcp", "notion", "model-context-protocol"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "@notionhq/client": "^5.0.0",
+    "dotenv": "^17.2.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
